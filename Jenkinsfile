@@ -8,7 +8,7 @@ pipeline{
         stage('Install playwright'){
             steps {
                 sh '''
-                    npm i -D @playwright/test
+                    npm install playwright@latest
                     npx playwright install
                 '''
             }
