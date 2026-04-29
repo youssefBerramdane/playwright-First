@@ -2,7 +2,7 @@ import { Page } from "@playwright/test";
 import ProductDetailsPage from "./ProductDetailsPage";
 import ProductListPage from "./ProductListPage";
 import HomePage from "./HomePage";
-import LoginPage from "./loginPage";
+import LoginPage from "./LoginPage";
 
 class PageManager {
 
