@@ -5,20 +5,11 @@ pipeline{
         }
     }
     stages {
-        stage('Install playwright'){
-            steps {
-                sh '''
-                    npm install playwright@latest
-                    npx playwright install
-                '''
-            }
-        }
-        stage('Run the test'){
-            steps {
-                sh '''
-                    npx playwrright test
-                '''
-            }
-        }
-    }
+      stage('e2e-tests') {
+         steps {
+            sh 'npm ci'
+            sh 'npx playwright test'
+         }
+      }
+   }
 }
